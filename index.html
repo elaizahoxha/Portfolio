@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,5 +49,40 @@
     <h2>Contact</h2>
     <p>Reach out at <a href="mailto:elaiza@example.com">elaiza@example.com</a></p>
   </section>
+
+  <section id="skills" class="section">
+    <h2>Skills &amp; Tools</h2>
+    <ul class="skills-list">
+      <li>Figma</li>
+      <li>HTML &amp; CSS</li>
+      <li>JavaScript</li>
+      <li>React (basic)</li>
+      <li>Git &amp; GitHub</li>
+      <li>User Research</li>
+      <li>SQL</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-nav">
+      <button data-tab="app" class="active">App Dev</button>
+      <button data-tab="ux">Project Mgmt</button>
+      <button data-tab="db">Database</button>
+    </div>
+    <div class="projects-content">
+      <div class="project-tab active" data-tab="app">
+        <p>StudyHaven App preview…</p>
+      </div>
+      <div class="project-tab" data-tab="ux">
+        <p>HRIS Case Study preview…</p>
+      </div>
+      <div class="project-tab" data-tab="db">
+        <p>Job Market Database preview…</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
