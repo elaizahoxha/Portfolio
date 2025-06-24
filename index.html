@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elaiza Hoxha | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <!-- Chart.js for sparkline -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <nav>
-    <h1 class="logo">Elaiza Hoxha</h1>
-    <ul class="nav-list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- Top Navigation -->
+  <nav class="top-banner">
+    <div class="nav-content">
+      <h1 class="logo">Elaiza Hoxha</h1>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
+  <!-- Hero with particles + typewriter -->
   <header class="hero">
-    <h2>Hi, I’m Elaiza</h2>
+    <div id="tsparticles" class="particles"></div>
+    <h1 id="typewriter" class="typewriter"></h1>
     <p>UX • Project Management • Front-end Development</p>
     <a href="#services" class="btn">See My Work</a>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>I’m an Informatics student at UW Seattle, passionate about creating user-centered digital experiences.</p>
   </section>
 
-  <section id="services" class="section">
+  <!-- Services Section -->
+  <section id="services" class="services section">
     <h2>Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Database Management</h3>
-        <p>Schema design, complex SQL queries, and performance tuning for large data sets.</p>
+    <div class="services__wrapper">
+      <div class="services__cards">
+        <div class="card" data-idx="0">
+          <img src="assets/sql-database.png" alt="Database Management">
+          <div class="card__content">
+            <h3>Database Management</h3>
+            <canvas id="db-sparkline" width="100" height="40"></canvas>
+            <p>Designed and optimized relational schemas, wrote complex SQL queries, and tuned performance for large data sets.</p>
+          </div>
+        </div>
+        <div class="card active" data-idx="1">
+          <img src="assets/ui-design.png" alt="Project Management">
+          <div class="card__content">
+            <h3>Project Management</h3>
+            <p>Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
+          </div>
+        </div>
+        <div class="card" data-idx="2">
+          <img src="assets/app-development.png" alt="App Development">
+          <div class="card__content">
+            <h3>App Development</h3>
+            <p>Built responsive web applications with React, integrated RESTful APIs, and deployed end-to-end solutions.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Project Management</h3>
-        <p>User flows, wireframes, Figma prototypes & Agile roadmaps.</p>
-      </div>
-      <div class="card">
-        <h3>App Development</h3>
-        <p>Responsive web apps with React, REST APIs, and deployments.</p>
+      <div class="services__info">
+        <h3 id="svc-title">Project Management</h3>
+        <p id="svc-copy">Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
+        <a id="svc-link" href="#projects" class="btn">See Related Project</a>
       </div>
     </div>
+    <nav class="services__nav">
+      <button data-idx="0">Database</button>
+      <button class="active" data-idx="1">Design</button>
+      <button data-idx="2">App Dev</button>
+    </nav>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Reach out at <a href="mailto:elaiza@example.com">elaiza@example.com</a></p>
   </section>
 
-  <section id="skills" class="section">
-    <h2>Skills &amp; Tools</h2>
-    <ul class="skills-list">
-      <li>Figma</li>
-      <li>HTML &amp; CSS</li>
-      <li>JavaScript</li>
-      <li>React (basic)</li>
-      <li>Git &amp; GitHub</li>
-      <li>User Research</li>
-      <li>SQL</li>
-    </ul>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-nav">
-      <button data-tab="app" class="active">App Dev</button>
-      <button data-tab="ux">Project Mgmt</button>
-      <button data-tab="db">Database</button>
+  <!-- Footer -->
+  <footer class="footer-clean">
+    <div class="footer-row">
+      <p>&copy; <span id="year"></span> Elaiza Hoxha</p>
     </div>
-    <div class="projects-content">
-      <div class="project-tab active" data-tab="app">
-        <p>StudyHaven App preview…</p>
-      </div>
-      <div class="project-tab" data-tab="ux">
-        <p>HRIS Case Study preview…</p>
-      </div>
-      <div class="project-tab" data-tab="db">
-        <p>Job Market Database preview…</p>
-      </div>
-    </div>
-  </section>
+  </footer>
 
   <script src="script.js"></script>
 </body>
