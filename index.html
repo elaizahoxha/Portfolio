@@ -10,6 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <!-- Chart.js for sparkline -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -20,6 +22,10 @@
       <ul class="nav-list">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#marketing">Marketing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -30,13 +36,18 @@
     <div id="tsparticles" class="particles"></div>
     <h1 id="typewriter" class="typewriter"></h1>
     <p>UX • Project Management • Front-end Development</p>
-    <a href="#services" class="btn">See My Work</a>
+    <a href="#about" class="btn">View My Work</a>
   </header>
 
   <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I’m an Informatics student at UW Seattle, passionate about creating user-centered digital experiences.</p>
+    <div class="about-wrapper">
+      <img src="https://via.placeholder.com/300" alt="Elaiza portrait" class="about-img"/>
+      <div class="about-text">
+        <p>I’m an Informatics student at UW Seattle, passionate about creating user-centered designs for web and mobile. I blend research, design, and front-end development to deliver impactful digital experiences.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Services Section -->
@@ -45,31 +56,31 @@
     <div class="services__wrapper">
       <div class="services__cards">
         <div class="card" data-idx="0">
-          <img src="assets/sql-database.png" alt="Database Management">
+          <img src="assets/sql-database.png" alt="Database"/>
           <div class="card__content">
             <h3>Database Management</h3>
             <canvas id="db-sparkline" width="100" height="40"></canvas>
-            <p>Designed and optimized relational schemas, wrote complex SQL queries, and tuned performance for large data sets.</p>
+            <p>Optimized relational schemas, wrote SQL queries, and tuned performance.</p>
           </div>
         </div>
         <div class="card active" data-idx="1">
-          <img src="assets/ui-design.png" alt="Project Management">
+          <img src="assets/ui-design.png" alt="PM"/>
           <div class="card__content">
             <h3>Project Management</h3>
-            <p>Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
+            <p>Led Agile roadmaps, user flows, wireframes & Figma prototypes.</p>
           </div>
         </div>
         <div class="card" data-idx="2">
-          <img src="assets/app-development.png" alt="App Development">
+          <img src="assets/app-development.png" alt="App Dev"/>
           <div class="card__content">
             <h3>App Development</h3>
-            <p>Built responsive web applications with React, integrated RESTful APIs, and deployed end-to-end solutions.</p>
+            <p>Built responsive React apps, integrated REST APIs, and deployed end-to-end.</p>
           </div>
         </div>
       </div>
       <div class="services__info">
         <h3 id="svc-title">Project Management</h3>
-        <p id="svc-copy">Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
+        <p id="svc-copy">Led Agile roadmaps, user flows, wireframes & Figma prototypes.</p>
         <a id="svc-link" href="#projects" class="btn">See Related Project</a>
       </div>
     </div>
@@ -80,16 +91,110 @@
     </nav>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills &amp; Tools</h2>
+    <ul class="skills-list">
+      <li>Figma</li><li>HTML &amp; CSS</li><li>JavaScript</li>
+      <li>React</li><li>Git &amp; GitHub</li><li>User Research</li><li>SQL</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <h2>Design & Development</h2>
+    <div class="projects-nav">
+      <button data-tab="app" class="active">App Dev</button>
+      <button data-tab="ux">Project Mgmt</button>
+      <button data-tab="db">Database</button>
+    </div>
+    <div class="projects-content">
+      <div class="project-tab active" data-tab="app">
+        <div class="project-grid">
+          <div class="project-item">
+            <div class="carousel">
+              <img src="images/SHcoffee.png" class="active"/><img src="images/SHcozy.png"/><img src="images/SHrainy.png"/><img src="images/SHtask.png"/>
+              <button class="prev">‹</button><button class="next">›</button>
+            </div>
+            <div class="project-info">
+              <h3>StudyHaven App</h3>
+              <p>Timer & task list app with themed study rooms.</p>
+              <a href="#" class="btn">View live</a>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="carousel">
+              <img src="images/WAseattle.png" class="active"/><img src="images/WAalbania.png"/><img src="images/WAkyrgyzstan.png"/><img src="images/WAjapan.png"/>
+              <button class="prev">‹</button><button class="next">›</button>
+            </div>
+            <div class="project-info">
+              <h3>Weather Dashboard</h3>
+              <p>Interactive weather charts and current conditions.</p>
+              <a href="#" class="btn">View live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-tab" data-tab="ux"><p>Project Mgmt preview…</p></div>
+      <div class="project-tab" data-tab="db"><p>Database preview…</p></div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process section">
+    <h2>My Workflow</h2>
+    <div class="process-steps">
+      <div class="step-box"><div class="summary">Discover</div><div class="details">Interviews & empathy mapping.</div></div>
+      <div class="step-box"><div class="summary">Define</div><div class="details">Personas & problem statements.</div></div>
+      <div class="step-box"><div class="summary">Design</div><div class="details">Wireframes & prototypes.</div></div>
+      <div class="step-box"><div class="summary">Develop</div><div class="details">Build HTML, CSS & JS.</div></div>
+      <div class="step-box"><div class="summary">Deliver</div><div class="details">Testing & hand-off docs.</div></div>
+    </div>
+  </section>
+
+  <!-- Marketing & PM Section -->
+  <section id="marketing" class="business section">
+    <h2>Marketing &amp; Project Management</h2>
+    <div class="business-wrapper">
+      <div class="business-card">
+        <div class="card-inner">
+          <div class="front">
+            <h3>Campaign Analytics</h3>
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_x62chJ.json"
+              background="transparent" speed="1" loop autoplay style="width:60px;height:60px;"></lottie-player>
+            <p>Visualizing multi-channel KPIs.</p>
+          </div>
+          <div class="back">
+            <p><strong>Role:</strong> PM & Designer<br><strong>Tools:</strong> Notion & DataViz</p>
+          </div>
+        </div>
+      </div>
+      <div class="business-card">
+        <div class="card-inner">
+          <div class="front"><h3>Product Launch</h3><p>Coordinated cross-functional demos.</p></div>
+          <div class="back"><p><strong>Role:</strong> Coordinator<br><strong>Skills:</strong> Roadmapping</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Reach out at <a href="mailto:elaiza@example.com">elaiza@example.com</a></p>
+    <h2>Let’s Connect</h2>
+    <p><a href="mailto:elaiza@example.com" class="contact-link">Email Me</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="footer-clean">
     <div class="footer-row">
       <p>&copy; <span id="year"></span> Elaiza Hoxha</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </footer>
 
