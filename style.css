@@ -298,6 +298,43 @@ section {
   /* Contact */
   .contact { text-align:center; padding:40px 20px; background: var(--pastel-peach); }
   .contact-link { color:#333; font-weight:600; text-decoration:none; }
+  /* base style for every link you want to “feel” clickable */
+.contact-link,
+nav a {
+  position: relative;           /* for the underline pseudo-element */
+  color: #333;
+  text-decoration: none;
+  transition: 
+    color    0.3s ease,         /* color fade */
+    transform 0.2s ease;        /* small scale on hover */
+}
+
+/* add an animated underline via ::after */
+.contact-link::after,
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 2px;
+  background: var(--pastel-purple);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+/* hover state */
+.contact-link:hover,
+nav a:hover {
+  color: var(--pastel-purple);
+  transform: scale(1.05);
+}
+
+/* reveal the underline */
+.contact-link:hover::after,
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
   /* Footer */
   .footer-clean { background: var(--pastel-purple); padding:40px 20px; color:#fff; font-size:.875rem; }
   .footer-row { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; max-width:1000px; margin:auto; }
