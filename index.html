@@ -3,348 +3,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
   <title>Elaiza Hoxha | Portfolio</title>
-  <!-- Custom Font -->
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Main Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation -->
+  <!-- progress bar + film grain -->
+  <div class="scrollbar" aria-hidden="true"><span></span></div>
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <!-- Top Navigation (marketing link removed) -->
   <nav class="top-banner">
     <div class="nav-content">
-      <h1 class="logo">Elaiza Hoxha</h1>
+      <div class="logo">Elaiza Hoxha</div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#process">Process</a></li>
-        <li><a href="#marketing">Marketing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header class="hero">
     <div id="tsparticles" class="particles"></div>
     <h1 class="typewriter" id="typewriter"></h1>
     <p>"The details are not the details. They make the design." – Charles Eames</p>
     <a href="#about" class="btn">View My Work</a>
-
   </header>
-  
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" id="about">
-    <h2>About Me</h2>
+    <h2 class="k-headline" data-split>About Me</h2>
     <div class="about-wrapper">
-      <img src="images/mee.png" alt="Elaiza Hoxha portrait" class="about-img" />
-      <div class="about-text">
-        <p>I’m an Informatics student at UW Seattle, passionate about creating user-centered designs for web and mobile. I blend research, design, and front-end development to deliver impactful digital experiences.</p>
+      <img src="images/meee.png" alt="Elaiza Hoxha portrait" class="about-img sticker floaty" data-parallax="0.05" />
+      <div class="about-text reveal">
+        <p>
+          I’m an Informatics student at UW Seattle who loves working where strategy, design, and tech meet.
+          I can code and prototype when needed, but what excites me most is guiding a product from an idea
+          to something people use and value. I enjoy shaping user insights into features that work for both the
+          people using them and the teams building them, ensuring every decision aligns with the user experience
+          and the product vision.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section id="services" class="services">
-    <h2>Services</h2>
+    <h2 class="k-headline" data-split>Services</h2>
+
     <div class="services__wrapper">
-      <!-- 1) Card stack -->
+      <!-- Card stack -->
       <div class="services__cards">
         <div class="card" data-idx="0">
-          <img src="images/SQL.png" alt="Database Management">
+          <img src="images/SQL.png" alt="Database Management" />
           <div class="card__content">
             <h3>Database Management</h3>
-           
             <p>Designed and optimized relational schemas, wrote complex SQL queries, and tuned performance for large data sets.</p>
           </div>
         </div>
+
         <div class="card active" data-idx="1">
-          <img src="images/PMEmpCom.png" alt="Project Management">
+          <img src="images/PMEmpCom.png" alt="Project Management" />
           <div class="card__content">
             <h3>Project Management</h3>
             <p>Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
           </div>
         </div>
+
         <div class="card" data-idx="2">
-          <img src="images/SHrainy.png" alt="App Development">
+          <img src="images/SHrainy.png" alt="App Development" />
           <div class="card__content">
             <h3>App Development</h3>
             <p>Built responsive web applications with React, integrated RESTful APIs, and deployed end-to-end solutions.</p>
           </div>
         </div>
       </div>
-      <!-- 2) Dynamic info pane -->
+
+      <!-- Info pane -->
       <div class="services__info">
         <h3 id="svc-title">Project Management</h3>
         <p id="svc-copy">Designed user flows, wireframes & high-fidelity Figma prototypes, while leading Agile/Scrum roadmaps, deliverables & stakeholder coordination.</p>
         <a id="svc-link" href="#projects" class="btn">See Related Project</a>
       </div>
     </div>
-    <!-- 3) Nav pills -->
-    <nav class="services__nav">
+
+    <!-- Pills with slider -->
+    <nav class="services__nav" id="svc-nav">
       <button data-idx="0">Database</button>
       <button class="active" data-idx="1">Design</button>
       <button data-idx="2">App Dev</button>
+      <span class="slider" aria-hidden="true"></span>
     </nav>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills marquee -->
   <section class="skills" id="skills">
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li>Figma</li>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>React (basic)</li>
-      <li>Git & GitHub</li>
-      <li>User Research Methods</li>
-      <li>Database Management</li>
-      <li>SQL</li>
-      <li>Project Management</li>
-    </ul>
+    <h2 class="k-headline" data-split>Skills & Tools</h2>
+    <div class="marquee">
+      <div class="track">
+        <span>Figma</span><span>HTML &amp; CSS</span><span>JavaScript</span>
+        <span>React (basic)</span><span>Git &amp; GitHub</span><span>User Research</span>
+        <span>Database Mgmt</span><span>SQL</span><span>Project Mgmt</span>
+        <span>Figma</span><span>HTML &amp; CSS</span><span>JavaScript</span>
+        <span>React (basic)</span><span>Git &amp; GitHub</span><span>User Research</span>
+        <span>Database Mgmt</span><span>SQL</span><span>Project Mgmt</span>
+      </div>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-<!-- Projects Section -->
-<section class="projects" id="projects">
-  <h2>Design & Development</h2>
+  <!-- Projects -->
+  <section class="projects editorial" id="projects">
+    <h2 class="k-headline" data-split>Design & Development</h2>
 
-  <!-- 1) Tab buttons -->
-  <div class="projects-nav">
-    <button data-tab="app" class="active">App Development</button>
-    <button data-tab="ux">Project Management</button>
-    <button data-tab="db">Database Management</button>
-  </div>
-
-  <!-- 2) Tab content panes -->
-  <div class="projects-content">
-    <!-- App Development -->
-    <div class="project-tab active" data-tab="app">
-      <div class="project-grid">
-        <!-- StudyHaven App -->
-        <div class="project-item">
-          <div class="carousel" data-carousel="study">
-            <img src="images/SHcoffee.png" class="active">
-            <img src="images/SHcozy.png">
-            <img src="images/SHrainy.png">
-            <img src="images/SHtask.png">
-            <button class="prev">‹</button>
-            <button class="next">›</button>
-          </div>
-          <div class="project-info">
-            <h3>StudyHaven App</h3>
-            <p>A productivity web app with timer, task list, &amp; themed study rooms.</p>
-            <p><strong>Tools:</strong> Figma, HTML, CSS, JS</p>
-            <p><strong>Role:</strong> Lead Designer &amp; Front-end Dev</p>
-
-            <a href="https://studyhaven-11dbe.web.app" class="btn">View live</a>
-          </div>
-        </div>
-        <!-- Weather Dashboard -->
-        <div class="project-item">
-          <div class="carousel" data-carousel="weather">
-            <img src="images/WAseattle.png" class="active">
-            <img src="images/WAalbania.png">
-            <img src="images/WAkyrgyzstan.png">
-            <img src="images/WAjapan.png">
-            <img src="images/WAchad.png">
-            <img src="images/WAarizona.png">
-            <img src="images/WAmoscow.png">
-            <img src="images/WAbellevue.png">
-            <button class="prev">‹</button>
-            <button class="next">›</button>
-          </div>
-          <div class="project-info">
-            <h3>Weather Dashboard</h3>
-            <p>Interactive dashboard showing current weather with graphs.</p>
-            <p><strong>Tools:</strong> HTML, CSS, JS, Chart.js</p>
-            <p><strong>Role:</strong> Front-end Dev</p>
-            <a href="https://jazzy-gaufre-e1794d.netlify.app" class="btn">View live</a>
-          </div>
-        </div>
-      </div>
-    </div> <!-- ← HERE we close the App tab! -->
-
-    <!-- Project Management -->
-    <div class="project-tab" data-tab="ux">
-      <div class="carousel" data-carousel="uxpm">
-        <img src="images/unnamed-3.png" class="active">
-        <img src="images/unnamed-4.png">
-        <img src="images/unnamed-5.png">
-        <img src="images/unnamed-6.png">
-        <img src="images/unnamed-7.png">
-        <button class="prev">‹</button>
-        <button class="next">›</button>
-      </div>
-      <div class="project-info">
-        <h3>HRIS Case Study</h3>
-        <p>Designed user flows, wireframes &amp; Figma prototypes. Led Agile sprints, stakeholder demos, and roadmapping in a group setting.
-        </p>
-        <p><strong>Outcome:</strong> +40% actionable insights</p>
-        <p><strong>Role:</strong> PM &amp; Designer</p>
-        <a href="https://dev.azure.com/bbgroup1/INFO%20380%20Project%20BB1/_wiki/wikis/INFO-380-Project-BB1.wiki/28/Executive-Summary" class="btn">See full case study</a>
-      </div>
+    <div class="projects-nav">
+      <button data-tab="app" class="active">App Development</button>
+      <button data-tab="ux">Project Management</button>
+      <button data-tab="db">Database Management</button>
     </div>
 
-    <!-- Job Market Analytics Database -->
-    <div class="project-tab" data-tab="db">
-      <div class="carousel" data-carousel="db">
-        <img src="images/Q1.png" class="active">
-        <img src="images/Q2.png">
-        <img src="images/Q3.png">
-        <img src="images/Q4.png">
-        <img src="images/Q5.png">
-        <img src="images/Q6.png">
-        <img src="images/Q7.png">
-        <img src="images/Q8.png">
-        <img src="images/Q9.png">
-        <img src="images/Q10.png">
-        <button class="prev">‹</button>
-        <button class="next">›</button>
+    <div class="projects-content">
+      <!-- App Dev -->
+      <div class="project-tab active" data-tab="app">
+        <div class="project-grid">
+          <div class="project-item">
+            <div class="carousel" data-carousel="study">
+              <img src="images/SHcoffee.png" class="active" alt="StudyHaven 1">
+              <img src="images/SHcozy.png" alt="">
+              <img src="images/SHrainy.png" alt="">
+              <img src="images/SHtask.png" alt="">
+              <button class="prev" aria-label="Previous">‹</button>
+              <button class="next" aria-label="Next">›</button>
+            </div>
+            <div class="project-info">
+              <h3>StudyHaven App</h3>
+              <p>A productivity web app with timer, task list, &amp; themed study rooms.</p>
+              <p><strong>Tools:</strong> Figma, HTML, CSS, JS</p>
+              <p><strong>Role:</strong> Lead Designer &amp; Front-end Dev</p>
+              <a href="https://studyhaven-11dbe.web.app" class="btn" target="_blank" rel="noopener">View live</a>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="carousel" data-carousel="weather">
+              <img src="images/WAseattle.png" class="active" alt="Weather Seattle">
+              <img src="images/WAalbania.png" alt=""><img src="images/WAkyrgyzstan.png" alt="">
+              <img src="images/WAjapan.png" alt=""><img src="images/WAchad.png" alt="">
+              <img src="images/WAarizona.png" alt=""><img src="images/WAmoscow.png" alt="">
+              <img src="images/WAbellevue.png" alt="">
+              <button class="prev" aria-label="Previous">‹</button>
+              <button class="next" aria-label="Next">›</button>
+            </div>
+            <div class="project-info">
+              <h3>Weather Dashboard</h3>
+              <p>Interactive dashboard showing current weather with graphs.</p>
+              <p><strong>Tools:</strong> HTML, CSS, JS</p>
+              <p><strong>Role:</strong> Front-end Dev</p>
+              <a href="https://jazzy-gaufre-e1794d.netlify.app" class="btn" target="_blank" rel="noopener">View live</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project-info">
-        <h3>Job Market Analytics Database</h3>
-        <p>
-            Modeled and loaded 2023–33 occupational projections from the BLS into a
-            normalized PostgreSQL schema, then wrote 10 core SQL queries—using window
-            functions, aggregates, and CTEs—to surface insights like top self‐employment
-            rates, median salaries by education, and growth forecasts.
-          </p>
-          <p><strong>Tools:</strong> SQL, Azure Data Studio, Visual Studio Code</p>
+
+      <!-- PM -->
+      <div class="project-tab" data-tab="ux">
+        <div class="carousel" data-carousel="uxpm">
+          <img src="images/unnamed-3.png" class="active" alt="">
+          <img src="images/unnamed-4.png" alt="">
+          <img src="images/unnamed-5.png" alt="">
+          <img src="images/unnamed-6.png" alt="">
+          <img src="images/unnamed-7.png" alt="">
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="project-info">
+          <h3>HRIS Case Study</h3>
+          <p>Designed user flows, wireframes &amp; Figma prototypes. Led Agile sprints, stakeholder demos, and roadmapping in a group setting.</p>
+          <p><strong>Outcome:</strong> +40% actionable insights</p>
+          <p><strong>Role:</strong> PM &amp; Designer</p>
+          <a href="https://dev.azure.com/bbgroup1/INFO%20380%20Project%20BB1/_wiki/wikis/INFO-380-Project-BB1.wiki/28/Executive-Summary" class="btn" target="_blank" rel="noopener">See full case study</a>
+        </div>
+      </div>
+
+      <!-- DB -->
+      <div class="project-tab" data-tab="db">
+        <div class="carousel" data-carousel="db">
+          <img src="images/Q1.png" class="active" alt="">
+          <img src="images/Q2.png" alt=""><img src="images/Q3.png" alt="">
+          <img src="images/Q4.png" alt=""><img src="images/Q5.png" alt="">
+          <img src="images/Q6.png" alt=""><img src="images/Q7.png" alt="">
+          <img src="images/Q8.png" alt=""><img src="images/Q9.png" alt="">
+          <img src="images/Q10.png" alt="">
+          <button class="prev" aria-label="Previous">‹</button>
+          <button class="next" aria-label="Next">›</button>
+        </div>
+        <div class="project-info">
+          <h3>Job Market Analytics Database</h3>
+          <p>Modeled and loaded 2023–33 BLS projections into normalized PostgreSQL, then wrote 10 core SQL queries using windows, aggregates, and CTEs.</p>
+          <p><strong>Tools:</strong> SQL, Azure Data Studio, VS Code</p>
           <p><strong>Role:</strong> Data Engineer &amp; Analyst</p>
-          <p><strong>Data source:</strong> <a href="https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm">Employment Projections</a> </p>
-        
-        <a href="https://github.com/elaizahoxha/Job-Market-Analytics.git" class="btn">View GitHub</a>
+          <p><strong>Data source:</strong> <a href="https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm" target="_blank" rel="noopener">Employment Projections</a></p>
+          <a href="https://github.com/elaizahoxha/Job-Market-Analytics.git" class="btn" target="_blank" rel="noopener">View GitHub</a>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-  
-
-
- <!-- Process Section -->
-<section class="process" id="process">
-    <h2>My Workflow</h2>
+  <!-- Process -->
+  <section class="process" id="process">
+    <h2 class="k-headline" data-split>My Workflow</h2>
     <div class="process-steps">
       <div class="step-box">
         <div class="summary">Discover</div>
-        <div class="details">In-depth user interviews, surveys, and empathy mapping.</div>
+        <div class="details">Talk to users, map journeys, spot friction. Turn questions into testable assumptions.</div>
       </div>
       <div class="step-box">
         <div class="summary">Define</div>
-        <div class="details">Personas &amp; problem statements distilled from research.</div>
+        <div class="details">Frame the problem, align success metrics, and prioritize the few bets that matter.</div>
       </div>
       <div class="step-box">
         <div class="summary">Design</div>
-        <div class="details">Wireframes, low-fi &amp; high-fi prototypes in Figma.</div>
+        <div class="details">Sketch → wireframe → hi-fi prototypes. Validate quickly with lightweight studies.</div>
       </div>
       <div class="step-box">
         <div class="summary">Develop</div>
-        <div class="details">Build HTML, CSS, JS and integrate APIs.</div>
+        <div class="details">Build accessible, responsive UI; integrate APIs; keep scope honest and iterative.</div>
       </div>
       <div class="step-box">
         <div class="summary">Deliver</div>
-        <div class="details">Testing, iteration, and final hand-off documentation.</div>
+        <div class="details">Ship, measure, and learn. Capture insights into the next sprint or release plan.</div>
       </div>
     </div>
   </section>
-  
-      
 
-  <!-- Marketing & Project Management Section -->
-  <section class="business" id="marketing">
-    <h2>Marketing & Project Management</h2>
-    <div class="business-wrapper">
-      <div class="business-card">
-        <div class="card-inner">
-          <div class="front">
-            <h3>Campaign Analytics Dashboard</h3>
+  <!-- ✨ art-meets-interface -->
+  <section id="art-meets-interface" class="ami">
+    <div class="wrapper">
+      <header class="ami-hero">
+        <h2>Mindful Motion🎐 </h2>
+        <p class="subtitle">Study of Soft Things</p>
+        <p class="tagline">This section reflects the emotional side of my design work — where interfaces feel alive, growing and changing with interaction. It’s a space that blurs art and technology, showing design as something human, not just polished. I see interfaces as extensions of people, shaped by feeling as much as by function.</p>
+      </header>
 
-
-            <lottie-player 
-            src="https://assets2.lottiefiles.com/packages/lf20_x62chJ.json"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-            style="width:60px; height:60px;">
-          </lottie-player>
-
-          
-
-
-
-            
-            <p>Led a project to visualize multi-channel marketing KPIs.</p>
+      <div class="ami-grid">
+        <article class="ami-card">
+          <h3>1) Sensory UX Lab</h3>
+          <p>Play with <b>sound, haptics, and micro-motion</b> to explore how tiny cues change feeling. Drag the sliders to compose a mood.</p>
+          <div class="ami-demo ami-demo--sensory">
+            <label>Tempo <input type="range" min="20" max="180" value="90" id="ami-tempo"></label>
+            <label>Softness <input type="range" min="0" max="100" value="70" id="ami-soft"></label>
+            <label>Brightness <input type="range" min="0" max="100" value="40" id="ami-bright"></label>
+            <button id="ami-play" class="ami-btn">play sample</button>
+            <div class="ami-bloom" aria-hidden="true"></div>
           </div>
-          <div class="back">
-            <p>
-              <strong>Role:</strong> PM & Designer<br>
-              <strong>Tools:</strong> DataViz, Strategy, Notion<br>
-              <strong>Outcome:</strong> +40% actionable insights
-            </p>
+        </article>
+
+        <article class="ami-card">
+          <h3>2) Emotional Microcopy</h3>
+          <p>Swap tone presets and watch the interface language shift while staying clear and respectful.</p>
+          <div class="ami-demo ami-demo--copy">
+            <div class="ami-copy-output" id="ami-copy">Ready when you are.</div>
+            <div class="ami-copy-controls">
+              <button data-tone="calm" class="ami-chip is-active">calm</button>
+              <button data-tone="warm" class="ami-chip">warm</button>
+              <button data-tone="brisk" class="ami-chip">brisk</button>
+              <button data-tone="encouraging" class="ami-chip">encouraging</button>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article class="ami-card">
+          <h3>3) Craft × Interface</h3>
+          <p>Arrange simple shapes like <b>petals and stems</b>. Learn one gentle rule at a time — balance, spacing, rhythm.</p>
+          <div class="ami-demo ami-demo--ikebana">
+            <div class="ami-stage" id="ami-stage" aria-label="arrangement canvas"></div>
+            <div class="ami-stage-tools">
+              <button class="ami-btn" id="ami-add-petal">add petal</button>
+              <button class="ami-btn" id="ami-add-stem">add stem</button>
+              <button class="ami-btn" id="ami-clear">clear</button>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="business-card">
-        <div class="card-inner">
-          <div class="front">
-            <h3>Product Launch Plan</h3>
-            <p>Coordinated cross-functional teams to demo a new app feature.</p>
-          </div>
-          <div class="back">
-            <p>
-              <strong>Role:</strong> Project Coordinator<br>
-              <strong>Skills:</strong> Roadmapping, Timeline Mgmt, Notion
-            </p>
-          </div>
-        </div>
-      </div>
+
+      <footer class="ami-notes">
+        <h4>notes</h4>
+        <ul>
+          <li><b>mindfulness</b> — slow, legible interactions with soft motion and room to breathe.</li>
+          <li><b>emotion</b> — language and feedback tuned for safety and care.</li>
+          <li><b>craft</b> — constraints that teach composition like ikebana: few parts, strong choices.</li>
+        </ul>
+      </footer>
     </div>
   </section>
-  
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
+  <!-- Contact -->
+  <section id="contact" class="contact">
     <div class="container">
-      <h2>Let’s Connect</h2>
+      <h2 class="k-headline" data-split>Let’s Connect</h2>
       <br>
       <p>
-        Email: 
-        <a href="mailto:elaizahoxha@gmail.com" class="contact-link">
-          elaizahoxha@gmail.com
-        </a><br>
-        
-        LinkedIn: 
-        <a
-          href="https://www.linkedin.com/in/elaizahoxha/"
-          target="_blank"
-          rel="noopener"
-          class="contact-link"
-        >
-          linkedin.com/in/elaizahoxha
-        </a><br>
-        
-        Phone: 
-        <a href="tel:+12068836725" class="contact-link">
-          (206) 883-6725
-        </a>
+        Email: <a href="mailto:elaizahoxha@gmail.com" class="contact-link">elaizahoxha@gmail.com</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/elaizahoxha/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/elaizahoxha</a><br>
+        Phone: <a href="tel:+12068836725" class="contact-link">(206) 883-6725</a>
       </p>
     </div>
   </section>
-  
 
-  <!-- Footer -->
+  <!-- Footer (marketing link removed) -->
   <footer class="footer-clean">
     <div class="footer-row container">
       <p>&copy; <span id="year"></span> Elaiza Hoxha</p>
@@ -352,14 +329,17 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Portfolio</a></li>
-        <li><a href="#marketing">Marketing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </footer>
 
-  <!-- Main Script -->
+  <!-- Page-transition overlay -->
+  <div id="transition" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="to-top" aria-label="Back to top">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>
-
