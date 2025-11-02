@@ -57,7 +57,7 @@ section.visible{opacity:1; transform:translateY(0);}
   height: 280px;         /* fixed height so it doesn't stretch */
   object-fit: cover;     /* crops instead of squishing */
   object-position: center; /* centers the crop */
-  border-radius: 50%;    /* keep the circular look if you had it */
+  border-radius: 50%;  
   overflow: hidden;
 }
 
@@ -186,10 +186,3 @@ section.visible{opacity:1; transform:translateY(0);}
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{animation:none !important; transition:none !important;}
 }
-
-/* ===== Removed from original =====
-   - Duplicate .ami blocks (kept one clean set)
-   - .ux-lab, .pin-lab, .trend-lab, .artlab (Labs) — not used by current HTML
-   - .business-* (unused)
-   - .projects::before big "EXTRA" text overlay
-*/

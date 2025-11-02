@@ -1,6 +1,3 @@
-/* ================================
-   ELAIZA PORTFOLIO — script.js
-   ================================ */
 
 /* start at top unless anchor */
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
