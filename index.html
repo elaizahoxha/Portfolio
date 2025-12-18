@@ -38,6 +38,7 @@
   <header class="hero">
     <div id="tsparticles" class="particles"></div>
     <h1 class="typewriter" id="typewriter"></h1>
+    <br>
     <p>"The details are not the details. They make the design." – Charles Eames</p>
     <a href="#about" class="btn">View My Work</a>
   </header>
@@ -49,11 +50,7 @@
       <img src="images/meee.png" alt="Elaiza Hoxha portrait" class="about-img sticker floaty" data-parallax="0.05" />
       <div class="about-text reveal">
         <p>
-          I’m an Informatics student at UW Seattle who loves working where strategy, design, and tech meet.
-          I can code and prototype when needed, but what excites me most is guiding a product from an idea
-          to something people use and value. I enjoy shaping user insights into features that work for both the
-          people using them and the teams building them, ensuring every decision aligns with the user experience
-          and the product vision.
+          I’m an Informatics student at UW Seattle who enjoys working where strategy, design, and technology meet. I approach product work by asking the right questions early, mapping user journeys, and using data to prioritize what matters most. I’m comfortable collaborating across design, engineering, and stakeholders to guide ideas from discovery to delivery, always grounding decisions in user needs and measurable impact.
         </p>
       </div>
     </div>
@@ -70,7 +67,7 @@
           <img src="images/SQL.png" alt="Database Management" />
           <div class="card__content">
             <h3>Database Management</h3>
-            <p>Designed and optimized relational schemas, wrote complex SQL queries, and tuned performance for large data sets.</p>
+            <p>Analyzed complex datasets to uncover trends, support decision-making, and optimize system performance. Designed normalized schemas and wrote advanced SQL queries to translate raw data into actionable insights.</p>
           </div>
         </div>
 
@@ -86,7 +83,7 @@
           <img src="images/SHrainy.png" alt="App Development" />
           <div class="card__content">
             <h3>App Development</h3>
-            <p>Built responsive web applications with React, integrated RESTful APIs, and deployed end-to-end solutions.</p>
+            <p>Built responsive web applications with a focus on usability, performance, and iteration. Integrated APIs and shipped end-to-end solutions informed by user needs and testing.</p>
           </div>
         </div>
       </div>
@@ -125,18 +122,55 @@
 
   <!-- Projects -->
   <section class="projects editorial" id="projects">
-    <h2 class="k-headline" data-split>Design & Development</h2>
+    <h2 class="k-headline" data-split>Product, Design & Systems</h2>
 
     <div class="projects-nav">
+      <button data-tab="zine">Creative Work</button>
       <button data-tab="app" class="active">App Development</button>
-      <button data-tab="ux">Project Management</button>
+      <button data-tab="ux">Product Strategy</button>
       <button data-tab="db">Database Management</button>
     </div>
 
     <div class="projects-content">
+
+      <div class="project-tab" data-tab="zine">
+        <div class="project-grid">
+          <div class="project-item">
+            <div class="carousel" data-carousel="zine">
+              <img src="images/crochetflower.png" class="active" alt="Softness Zine Cover">
+              <img src="images/catpoem.png" alt="Zine Spread">
+              <img src="images/pinkdress.png" alt="Zine Spread">
+              <img src="images/laizalily.png" alt="Zine Spread">
+              <img src="images/gcollage.png" alt="Zine Spread">
+              <img src="images/myextras.png" alt="Zine Spread">
+              <img src="images/stickerbutterfly.png" alt="Zine Spread">
+              <img src="images/stamp.png" alt="Zine Spread">
+              <img src="images/greenpoem.png" alt="Zine Spread">
+              <img src="images/greenpoem.png" alt="Zine Spread">
+              <img src="images/legend.png" alt="Zine Spread">
+              <img src="images/Cover Page.png" alt="Zine Spread">
+            
+              <button class="prev" aria-label="Previous">‹</button>
+              <button class="next" aria-label="Next">›</button>
+            </div>
+            <div class="project-info">
+              <h3>Softness | Interactive Zine</h3>
+              <p>A physical and digital zine exploring identity, storytelling, and gentle interaction design. I served as both the creative lead and project lead, setting the overall vision, defining the direction of the zine, and guiding the group through concept development, iteration, and execution.
+
+                I created the visual system and hands-on artifacts myself, while also coordinating timelines, giving and gathering feedback, checking in with teammates, and ensuring the project stayed aligned with its goals. This project reflects how I lead ambiguous, creative work by balancing vision, structure, and collaboration.</p>   <br>
+              <p><strong>Tools:</strong> Figma, Canva, collage, photography, typography, print & digital layout</p>
+              <p><strong>Role:</strong> Visual Designer • Author • Content Creator • Project Coordinator</p>
+              <a href="YOUR-ZINE-LINK-HERE" class="btn" target="_blank" rel="noopener">→ View full documentation</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
       <!-- App Dev -->
       <div class="project-tab active" data-tab="app">
         <div class="project-grid">
+          
           <div class="project-item">
             <div class="carousel" data-carousel="study">
               <img src="images/SHcoffee.png" class="active" alt="StudyHaven 1">
@@ -148,9 +182,9 @@
             </div>
             <div class="project-info">
               <h3>StudyHaven App</h3>
-              <p>A productivity web app with timer, task list, &amp; themed study rooms.</p>
+              <p>A productivity-focused web app designed to help students stay focused through structured study sessions, task tracking, and themed environments. I identified core user needs around motivation and time management, defined the feature set, and led the design and front-end implementation from concept to delivery.</p>   <br>
               <p><strong>Tools:</strong> Figma, HTML, CSS, JS</p>
-              <p><strong>Role:</strong> Lead Designer &amp; Front-end Dev</p>
+              <p><strong>Role:</strong> Product & Design Lead · Front-End Developer</p>
               <a href="https://studyhaven-11dbe.web.app" class="btn" target="_blank" rel="noopener">View live</a>
             </div>
           </div>
@@ -167,58 +201,111 @@
             </div>
             <div class="project-info">
               <h3>Weather Dashboard</h3>
-              <p>Interactive dashboard showing current weather with graphs.</p>
+              <p>An interactive dashboard that visualizes real-time weather data with a focus on clarity and usability. I designed and built the interface to help users quickly interpret conditions, trends, and forecasts without cognitive overload.</p>
+              <br>
               <p><strong>Tools:</strong> HTML, CSS, JS</p>
-              <p><strong>Role:</strong> Front-end Dev</p>
+              <p><strong>Role:</strong> Front-End Developer</p>
               <a href="https://jazzy-gaufre-e1794d.netlify.app" class="btn" target="_blank" rel="noopener">View live</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PM -->
-      <div class="project-tab" data-tab="ux">
-        <div class="carousel" data-carousel="uxpm">
-          <img src="images/unnamed-3.png" class="active" alt="">
-          <img src="images/unnamed-4.png" alt="">
-          <img src="images/unnamed-5.png" alt="">
-          <img src="images/unnamed-6.png" alt="">
-          <img src="images/unnamed-7.png" alt="">
-          <button class="prev" aria-label="Previous">‹</button>
-          <button class="next" aria-label="Next">›</button>
-        </div>
-        <div class="project-info">
-          <h3>HRIS Case Study</h3>
-          <p>Designed user flows, wireframes &amp; Figma prototypes. Led Agile sprints, stakeholder demos, and roadmapping in a group setting.</p>
-          <p><strong>Outcome:</strong> +40% actionable insights</p>
-          <p><strong>Role:</strong> PM &amp; Designer</p>
-          <a href="https://dev.azure.com/bbgroup1/INFO%20380%20Project%20BB1/_wiki/wikis/INFO-380-Project-BB1.wiki/28/Executive-Summary" class="btn" target="_blank" rel="noopener">See full case study</a>
-        </div>
+    
+    <!-- PM -->
+<div class="project-tab" data-tab="ux">
+  <div class="project-grid">
+
+    <!-- HRIS -->
+    <div class="project-item">
+      <div class="carousel">
+        <img src="images/PM-1.png" class="active" alt="">
+        <img src="images/PM-2.png">
+        <img src="images/PM-3.png">
+        <img src="images/PM-4.png">
+        <img src="images/PM-5.png">
+        <img src="images/PM-6.png">
+        <img src="images/PM-7.png">
+        <button class="prev">‹</button>
+        <button class="next">›</button>
       </div>
 
-      <!-- DB -->
-      <div class="project-tab" data-tab="db">
-        <div class="carousel" data-carousel="db">
-          <img src="images/Q1.png" class="active" alt="">
-          <img src="images/Q2.png" alt=""><img src="images/Q3.png" alt="">
-          <img src="images/Q4.png" alt=""><img src="images/Q5.png" alt="">
-          <img src="images/Q6.png" alt=""><img src="images/Q7.png" alt="">
-          <img src="images/Q8.png" alt=""><img src="images/Q9.png" alt="">
-          <img src="images/Q10.png" alt="">
-          <button class="prev" aria-label="Previous">‹</button>
-          <button class="next" aria-label="Next">›</button>
-        </div>
-        <div class="project-info">
-          <h3>Job Market Analytics Database</h3>
-          <p>Modeled and loaded 2023–33 BLS projections into normalized PostgreSQL, then wrote 10 core SQL queries using windows, aggregates, and CTEs.</p>
-          <p><strong>Tools:</strong> SQL, Azure Data Studio, VS Code</p>
-          <p><strong>Role:</strong> Data Engineer &amp; Analyst</p>
-          <p><strong>Data source:</strong> <a href="https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm" target="_blank" rel="noopener">Employment Projections</a></p>
-          <a href="https://github.com/elaizahoxha/Job-Market-Analytics.git" class="btn" target="_blank" rel="noopener">View GitHub</a>
-        </div>
+      <div class="project-info">
+        <h3>HRIS Case Study</h3>
+        <h4>End-to-end product leadership for an enterprise HRIS redesign focused on pay equity, compliance, and scalability.</h4>
+        <p>
+          Led product discovery, requirements definition, and delivery for a centralized HRIS system. Defined user needs, authored executive documentation, designed user flows and prototypes, and drove sprint planning, prioritization, and stakeholder alignment.
+        </p>
+        <p><strong>Tools:</strong> Figma, Azure DevOps, Agile workflows</p>
+        <p><strong>Role:</strong> Product Manager · Designer</p>
+        <a href="https://dev.azure.com/bbgroup1/INFO%20380%20Project%20BB1/_wiki/wikis/INFO-380-Project-BB1.wiki/28/Executive-Summary" class="btn" target="_blank" rel="noopener">
+          See full case study
+        </a>
       </div>
     </div>
-  </section>
+
+    <!-- Pinterest -->
+<!-- Pinterest -->
+<div class="project-item">
+  <div class="carousel" data-carousel="pinterest">
+    <img src="images/pinterest-1.png" class="active" alt="">
+    <img src="images/pinterest-2.png" alt="">
+    <img src="images/pinterest-3.png" alt="">
+    <img src="images/pinterest-4.png" alt="">
+
+    <button class="prev">‹</button>
+    <button class="next">›</button>
+  </div>
+
+      
+
+      <div class="project-info">
+        <h3>Pinterest Growth & Engagement Analytics</h3>
+        <h4>Data-driven growth experiments combining creative direction and analytics.</h4>
+        <p>
+          Designed and executed a long-term growth strategy through structured experiments across pin formats, titles, boards, and visual styles. Tracked impressions, saves, and engagement to identify sustained growth patterns.
+        </p>
+        <p>
+          Identified an anchor pin that consistently drove traffic and used it to inform future content strategy and iteration cycles.
+        </p>
+        <p><strong>Outcome:</strong> +1,500% impressions · +4,050% saves</p>
+        <p><strong>Tools:</strong> Pinterest Analytics, Excel, data analysis, visual design</p>
+        <p><strong>Role:</strong> Product Strategist · Analyst · Creative Lead</p>
+        <a href="https://elaizahoxha.github.io/MyZine/" class="btn" target="_blank" rel="noopener">
+          → View full case study
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <!-- DB -->
+  <div class="project-tab" data-tab="db">
+    <div class="carousel" data-carousel="db">
+      <img src="images/Q1.png" class="active" alt="">
+      <img src="images/Q2.png" alt=""><img src="images/Q3.png" alt="">
+      <img src="images/Q4.png" alt=""><img src="images/Q5.png" alt="">
+      <img src="images/Q6.png" alt=""><img src="images/Q7.png" alt="">
+      <img src="images/Q8.png" alt=""><img src="images/Q9.png" alt="">
+      <img src="images/Q10.png" alt="">
+      <button class="prev" aria-label="Previous">‹</button>
+      <button class="next" aria-label="Next">›</button>
+    </div>
+    <div class="project-info">
+      <h3>Job Market Analytics Database</h3>
+      <p>Designed and queried a normalized PostgreSQL database to analyze U.S. labor market trends and answer strategic workforce questions using BLS projection data.</p>
+      <p><strong>Tools:</strong> SQL (CTEs, window functions, aggregates), Azure Data Studio, VS Code</p>
+      <p><strong>Role:</strong> Data Engineer · Analyst</p>
+      <p><strong>Data source:</strong> <a href="https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm" target="_blank" rel="noopener">Employment Projections</a></p>
+      <a href="https://github.com/elaizahoxha/Job-Market-Analytics.git" class="btn" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </div>
+</div>
+</section>
+
 
   <!-- Process -->
   <section class="process" id="process">
@@ -226,87 +313,36 @@
     <div class="process-steps">
       <div class="step-box">
         <div class="summary">Discover</div>
-        <div class="details">Talk to users, map journeys, spot friction. Turn questions into testable assumptions.</div>
+        <div class="details">Talk to users, map journeys, and identify friction. Turn ambiguity into clear, testable problem statements.</div>
       </div>
       <div class="step-box">
         <div class="summary">Define</div>
-        <div class="details">Frame the problem, align success metrics, and prioritize the few bets that matter.</div>
+        <div class="details">Frame the problem, align on success metrics, assess constraints, and prioritize the few bets that matter most.</div>
       </div>
       <div class="step-box">
         <div class="summary">Design</div>
-        <div class="details">Sketch → wireframe → hi-fi prototypes. Validate quickly with lightweight studies.</div>
+        <div class="details">Sketch → wireframe → high-fidelity prototypes. Validate assumptions quickly through feedback and lightweight testing.</div>
       </div>
       <div class="step-box">
         <div class="summary">Develop</div>
-        <div class="details">Build accessible, responsive UI; integrate APIs; keep scope honest and iterative.</div>
+        <div class="details">Build accessible, responsive solutions; integrate APIs; collaborate closely with engineering while keeping scope realistic.</div>
       </div>
       <div class="step-box">
         <div class="summary">Deliver</div>
-        <div class="details">Ship, measure, and learn. Capture insights into the next sprint or release plan.</div>
+        <div class="details">Ship, measure impact, and learn. Translate results into insights that inform the next sprint, roadmap, or release.</div>
       </div>
     </div>
   </section>
 
-  <!-- ✨ art-meets-interface -->
-  <section id="art-meets-interface" class="ami">
-    <div class="wrapper">
-      <header class="ami-hero">
-        <h2>Mindful Motion🎐 </h2>
-        <p class="subtitle">Study of Soft Things</p>
-        <p class="tagline">This section reflects the emotional side of my design work — where interfaces feel alive, growing and changing with interaction. It’s a space that blurs art and technology, showing design as something human, not just polished. I see interfaces as extensions of people, shaped by feeling as much as by function.</p>
-      </header>
+ 
 
-      <div class="ami-grid">
-        <article class="ami-card">
-          <h3>1) Sensory UX Lab</h3>
-          <p>Play with <b>sound, haptics, and micro-motion</b> to explore how tiny cues change feeling. Drag the sliders to compose a mood.</p>
-          <div class="ami-demo ami-demo--sensory">
-            <label>Tempo <input type="range" min="20" max="180" value="90" id="ami-tempo"></label>
-            <label>Softness <input type="range" min="0" max="100" value="70" id="ami-soft"></label>
-            <label>Brightness <input type="range" min="0" max="100" value="40" id="ami-bright"></label>
-            <button id="ami-play" class="ami-btn">play sample</button>
-            <div class="ami-bloom" aria-hidden="true"></div>
-          </div>
-        </article>
 
-        <article class="ami-card">
-          <h3>2) Emotional Microcopy</h3>
-          <p>Swap tone presets and watch the interface language shift while staying clear and respectful.</p>
-          <div class="ami-demo ami-demo--copy">
-            <div class="ami-copy-output" id="ami-copy">Ready when you are.</div>
-            <div class="ami-copy-controls">
-              <button data-tone="calm" class="ami-chip is-active">calm</button>
-              <button data-tone="warm" class="ami-chip">warm</button>
-              <button data-tone="brisk" class="ami-chip">brisk</button>
-              <button data-tone="encouraging" class="ami-chip">encouraging</button>
-            </div>
-          </div>
-        </article>
 
-        <article class="ami-card">
-          <h3>3) Craft × Interface</h3>
-          <p>Arrange simple shapes like <b>petals and stems</b>. Learn one gentle rule at a time — balance, spacing, rhythm.</p>
-          <div class="ami-demo ami-demo--ikebana">
-            <div class="ami-stage" id="ami-stage" aria-label="arrangement canvas"></div>
-            <div class="ami-stage-tools">
-              <button class="ami-btn" id="ami-add-petal">add petal</button>
-              <button class="ami-btn" id="ami-add-stem">add stem</button>
-              <button class="ami-btn" id="ami-clear">clear</button>
-            </div>
-          </div>
-        </article>
-      </div>
 
-      <footer class="ami-notes">
-        <h4>notes</h4>
-        <ul>
-          <li><b>mindfulness</b> — slow, legible interactions with soft motion and room to breathe.</li>
-          <li><b>emotion</b> — language and feedback tuned for safety and care.</li>
-          <li><b>craft</b> — constraints that teach composition like ikebana: few parts, strong choices.</li>
-        </ul>
-      </footer>
-    </div>
-  </section>
+
+
+
+
 
   <!-- Contact -->
   <section id="contact" class="contact">
@@ -341,5 +377,8 @@
   <button class="to-top" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
+ <!-- <script src="js/main.js" defer></script>
+<script src="js/product-simulator.js" defer></script> -->
+
 </body>
 </html>

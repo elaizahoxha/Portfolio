@@ -127,34 +127,29 @@ section.visible{opacity:1; transform:translateY(0);}
 .step-box:nth-child(1){background:var(--pastel-pink);} .step-box:nth-child(2){background:var(--pastel-yellow);} 
 .step-box:nth-child(3){background:var(--pastel-green);} .step-box:nth-child(4){background:var(--pastel-blue);} .step-box:nth-child(5){background:var(--pastel-peach);} 
 
-/* ===== art-meets-interface (keep) ===== */
-.ami { background:#faf7f8; padding: 6rem 0; border-top: 1px solid rgba(0,0,0,.06); }
-.ami .wrapper{max-width:1100px;margin:0 auto;padding:0 1.25rem;}
-.ami-hero h2{font-family: var(--display, "Outfit", system-ui); font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing:.5px;}
-.ami-hero .subtitle{font-weight:600; opacity:.9; margin-top:.25rem;}
-.ami-hero .tagline{margin-top:.5rem; color: #555;}
-.ami-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2rem;}
-.ami-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:1.25rem;box-shadow:0 8px 24px rgba(0,0,0,.06);} 
-.ami-card h3{margin:0 0 .5rem 0; font-size:1.1rem}
-.ami-card p{color:#444;margin:0 0 .75rem 0;}
-.ami-demo{border:1px dashed rgba(0,0,0,.15);border-radius:14px;padding:1rem;display:flex;flex-direction:column;gap:.75rem}
-.ami-demo label{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;gap:.75rem}
-.ami-demo input[type="range"]{width:65%}
-.ami-btn{background: #243a2e;color:white;border:none;padding:.6rem .9rem;border-radius:999px;cursor:pointer} 
-.ami-btn:active{transform:translateY(1px)}
-.ami-chip{border:1px solid rgba(0,0,0,.12);background:#fff;border-radius:999px;padding:.35rem .7rem;cursor:pointer;font-size:.85rem}
-.ami-chip.is-active{background:#243a2e;color:#fff;border-color:#243a2e}
-.ami-copy-output{padding:1rem;border-radius:12px;background:linear-gradient(180deg,#fff, #f8f8f8);border:1px solid rgba(0,0,0,.08);min-height:48px;display:flex;align-items:center}
-.ami-bloom{height:120px;border-radius:12px;background:radial-gradient(100px 60px at 20% 40%, rgba(226,140,160,.35), transparent 60%), radial-gradient(120px 80px at 70% 60%, rgba(141,180,160,.35), transparent 60%);border:1px solid rgba(0,0,0,.04)}
-.ami-demo--ikebana{gap:1rem}
-.ami-stage{height:180px;border-radius:12px;background:#fff;border:1px solid rgba(0,0,0,.08);position:relative;overflow:hidden}
-.ami-stage .piece{position:absolute;transition:transform .4s ease, opacity .3s ease}
-.ami-stage .petal{width:46px;height:30px;border-radius:50% 50% 48% 52%/55% 45% 55% 45%;background:linear-gradient(180deg, rgba(227,181,197,.85), rgba(251,244,246,.9));box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.ami-stage .stem{width:6px;height:90px;border-radius:3px;background:linear-gradient(180deg, #3b5b4a, #243a2e)}
-.ami-stage-tools{display:flex;gap:.5rem}
-.ami-notes{margin-top:2rem}
-.ami-notes h4{margin:0 0 .5rem 0; font-size:1rem}
-.ami-notes ul{margin:0;padding-left:1.2rem;color:#333}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== Contact & Footer ===== */
 .contact{text-align:center; padding:40px 20px; background:var(--pastel-peach);} 
@@ -186,3 +181,4 @@ section.visible{opacity:1; transform:translateY(0);}
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{animation:none !important; transition:none !important;}
 }
+
