@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Market Analytics Database | Elaiza Hoxha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="database-case.css" />
+</head>
+<body>
+
+  <div class="case-noise" aria-hidden="true"></div>
+
+  <nav class="case-nav">
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    
+    <div class="case-meta">
+    </div>
+    
+    </nav>
+
+  <header class="case-hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Database Management • SQL • Labor Market Analytics</p>
+      <h1>Job Market Analytics Database</h1>
+
+      <div class="hero-orbit-wrap">
+        <div class="orbit-center">
+          <span>U.S. Labor Market</span>
+        </div>
+
+        <div class="orbit orbit-1">
+          <span>BLS Data</span>
+          <span>SQL Queries</span>
+          <span>Education</span>
+          <span>Salaries</span>
+        </div>
+
+        <div class="orbit orbit-2">
+          <span>Growth</span>
+          <span>Openings</span>
+          <span>Forecasts</span>
+          <span>Training</span>
+          <span>Workforce Trends</span>
+          <span>Job Demand</span>
+        </div>
+      </div>
+
+      <p class="hero-subtitle">
+        Designing a relational database to analyze U.S. labor market trends, compare occupations, and turn workforce data into structured, queryable insights.
+      </p>
+
+      <div class="hero-meta">
+        <div class="meta-pill">Role: Data Engineer · Analyst</div>
+        <div class="meta-pill">Tools: SQL, Azure Data Studio, VS Code</div>
+        <div class="meta-pill">Source: BLS Employment Projections</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-main">
+
+    <section class="section intro-grid">
+      <div class="intro-copy">
+        <h2>Overview</h2>
+        <p>
+          This project focused on building a normalized relational database that could make labor market data easier to explore, compare, and analyze. Instead of treating employment projections as static spreadsheet values, I structured the information into connected entities that support more flexible analytical questions.
+        </p>
+        <p>
+          The database was designed around occupational data from the U.S. Bureau of Labor Statistics, including employment counts, projected growth, annual openings, median salaries, education requirements, and training requirements. I also extended the system with additional synthetic data to model people, employers, job history, and credentials so the database could support more realistic relationships and richer SQL queries.
+        </p>
+        <p>
+          The final result was a system that could answer questions about salary, job demand, self-employment, required education, and long-term employment trends in a much more structured way than a flat dataset could.
+        </p>
+      </div>
+
+      <aside class="project-facts">
+        <div class="fact-card">
+          <h3>Project Focus</h3>
+          <p>Relational database design for workforce analytics and occupational trend analysis.</p>
+        </div>
+        <div class="fact-card">
+          <h3>Core Skills</h3>
+          <p>Schema design, normalization, SQL querying, CTEs, ranking, aggregates, analytical functions.</p>
+        </div>
+        <div class="fact-card">
+          <h3>Main Outcome</h3>
+          <p>A queryable system that transforms labor market data into useful insights for career and workforce analysis.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>The Problem</h2>
+      <p>
+        Labor market information is valuable, but it is often difficult to work with in its raw form. Many employment datasets are published as spreadsheets or reference tables that are useful for reading but not ideal for deeper analysis. Once someone wants to compare salary against education requirements, or job growth against training barriers, the process becomes more manual and time-consuming.
+      </p>
+      <p>
+        This project addresses that issue by organizing workforce data into a relational model. Instead of storing everything in one flat structure, the system separates occupations, degrees, training, employers, and people into their own entities, then connects them through bridge tables where needed. That makes the data easier to maintain and much more useful for answering multi-step analytical questions.
+      </p>
+      <p>
+        The goal was not just to store data, but to design a system that could support more thoughtful questions about the labor market, such as which jobs are growing fastest, which occupations have strong salaries relative to education level, and which careers show higher levels of self-employment.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Data Source</h2>
+      <p>
+        The main source for this project was the U.S. Bureau of Labor Statistics employment projections dataset. That data provided the core occupational metrics used in the database, including 2023 employment, projected 2033 employment, average annual openings, self-employment rate, and median annual wage.
+      </p>
+      <p>
+        Because the BLS dataset is strong on labor statistics but does not fully model relational activity between people, employers, education, and training, I supplemented it with realistic synthetic data. This made it possible to simulate a fuller system with job histories, credential relationships, employer-provided training, and job requirements.
+      </p>
+      <p>
+        That combination made the project more useful as a database case study because it demonstrates both structured public data modeling and the ability to create relational depth beyond a single imported table.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading-row">
+        <div>
+          <h2>Database Architecture</h2>
+          <p class="section-support">
+            A normalized relational schema designed to reduce redundancy, preserve data integrity, and support more advanced workforce analysis.
+          </p>
+        </div>
+      </div>
+
+      <div class="architecture-grid">
+        <article class="architecture-card">
+          <h3>Person</h3>
+          <p>
+            Stores demographic and identity-based information for individuals, including name, birthdate, race, and gender. This allows the database to represent people as part of a broader workforce model instead of only storing job statistics.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>JobCategory</h3>
+          <p>
+            Serves as the analytical core of the system. This table stores occupation-level labor data such as job title, 2023 employment, 2033 projected employment, self-employment rate, average annual openings, and median salary.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Degree</h3>
+          <p>
+            Stores educational credentials by degree type and field of study. This supports queries about education requirements, salary by degree level, and job-education relationships.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Training</h3>
+          <p>
+            Represents certifications, workshops, and other training programs. This makes it possible to distinguish formal degree requirements from skill-based or on-the-job training pathways.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Employer</h3>
+          <p>
+            Stores organization-level information such as employer name and industry. This supports modeling of who provides training, where jobs may be associated, and how workforce systems connect to employers.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>OccupationCategory</h3>
+          <p>
+            Provides a broader category layer for occupations using occupational codes and labels. This adds structure to the system and supports grouping and classification.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Bridge Tables</h3>
+          <p>
+            Tables such as <strong>PersonJob</strong>, <strong>PersonDegree</strong>, <strong>PersonTraining</strong>, <strong>JobDegreeRequirement</strong>, and <strong>JobTrainingRequirement</strong> handle many-to-many relationships and make the schema more realistic and scalable.
+          </p>
+        </article>
+
+        <article class="architecture-card">
+          <h3>Integrity Rules</h3>
+          <p>
+            Primary keys, foreign keys, composite keys, and cascade rules were used to maintain consistency across the database and prevent orphaned or mismatched records.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>ERD</h2>
+      <p>
+        The entity relationship diagram maps out the structure of the database and shows how core entities connect to one another. A major part of the design was deciding where direct relationships made sense and where bridge tables were necessary to model many-to-many relationships without duplicating data.
+      </p>
+
+      <figure class="image-frame large-frame">
+        <img src="images/erd-diagram.png" alt="Entity relationship diagram for the Job Market Analytics Database">
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2>Implementation Approach</h2>
+      <p>
+        I implemented the schema using SQL CREATE TABLE statements with explicit primary key and foreign key constraints. The design uses normalized tables so that entities such as degrees, training, and employers are stored once and then linked where needed, instead of repeating the same information in multiple places.
+      </p>
+      <p>
+        I also used composite primary keys in the bridge tables to represent many-to-many relationships cleanly. For example, one person can have multiple degrees, and one degree type can belong to many people. Similarly, one job may require multiple training programs, and one training program may apply to several jobs.
+      </p>
+      <p>
+        To support cleaner maintenance, I included cascade rules on several foreign key relationships. That means if a parent record is deleted or updated, the related records stay synchronized rather than becoming disconnected from the rest of the schema.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Key SQL Queries</h2>
+      <p>
+        A big part of this project was not just creating the schema, but using it to answer analytical questions in a way that shows why the structure matters. The queries below highlight some of the most useful patterns in the project, including ranking, grouping, analytical functions, filtering, and relationship-based joins.
+      </p>
+
+      <div class="query-stack">
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>1. Top Jobs by Self-Employment</h3>
+            <p>
+              This query ranks occupations by their self-employment rate in 2023. I used a Common Table Expression and the <strong>RANK()</strong> window function so the results could be ordered from highest to lowest while still being easy to filter afterward.
+            </p>
+            <p>
+              This is useful because it answers a more targeted career question than a simple list of jobs. Instead of only looking at salary or openings, it highlights occupations where independent work is more common, which could matter for users who are interested in flexibility, entrepreneurship, or contract-based careers.
+            </p>
+            <p>
+              It also demonstrates a key SQL skill in this project: using window functions to rank results without losing row-level detail.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH RankedSelfEmployed AS (
+  SELECT JobID, JobTitle, SelfEmployment2023,
+         RANK() OVER (ORDER BY SelfEmployment2023 DESC) AS Rank
+  FROM JobCategory
+  WHERE SelfEmployment2023 IS NOT NULL
+)
+SELECT Rank, JobID, JobTitle, SelfEmployment2023
+FROM RankedSelfEmployed
+WHERE Rank &lt;= 5;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>2. Median Salary by Education Level</h3>
+            <p>
+              This query connects job requirements and salary data by joining <strong>JobDegreeRequirement</strong>, <strong>Degree</strong>, and <strong>JobCategory</strong>. It then uses <strong>PERCENTILE_CONT(0.5)</strong> to calculate the median salary for jobs associated with each degree type.
+            </p>
+            <p>
+              I chose median instead of average because salary distributions can be skewed by unusually high-paying positions. Median gives a more balanced picture of what compensation looks like within each education category.
+            </p>
+            <p>
+              This query shows how the database can support questions that combine multiple dimensions of the labor market. It is not just about “what pays well,” but “how does pay relate to the education required to enter that kind of work?”
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>SELECT d.DegreeType,
+       PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY jc.MedianSalary)
+       OVER (PARTITION BY d.DegreeType) AS Median_Salary_By_Education
+FROM JobDegreeRequirement jdr
+JOIN Degree d ON jdr.DegreeID = d.DegreeID
+JOIN JobCategory jc ON jdr.JobID = jc.JobID
+WHERE jc.MedianSalary IS NOT NULL;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>3. Jobs With the Most Average Annual Openings</h3>
+            <p>
+              This query ranks jobs by the number of average annual openings, which helps identify occupations with consistently high labor demand. While projected growth tells one story, openings can reveal a different one because they capture not only new jobs, but also replacement needs and turnover.
+            </p>
+            <p>
+              This makes the query especially useful for workforce analysis because some roles may not grow at the fastest rate but still generate a large number of openings each year.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH RankedOpenings AS (
+  SELECT JobID, JobTitle, OpeningsAvg,
+         RANK() OVER (ORDER BY OpeningsAvg DESC) AS Rank
+  FROM JobCategory
+)
+SELECT Rank, JobID, JobTitle, OpeningsAvg
+FROM RankedOpenings
+WHERE Rank &lt;= 5;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>4. Highest Paying Jobs</h3>
+            <p>
+              This query ranks occupations by median salary. It is a straightforward ranking query, but it is still important because it gives a quick way to compare earning potential across roles stored in the system.
+            </p>
+            <p>
+              In the context of the full database, this query becomes more useful when combined with other dimensions such as education requirements, training requirements, and projected growth.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH RankedSalary AS (
+  SELECT JobID, JobTitle, MedianSalary,
+         RANK() OVER (ORDER BY MedianSalary DESC) AS Rank
+  FROM JobCategory
+)
+SELECT Rank, JobID, JobTitle, MedianSalary
+FROM RankedSalary
+WHERE Rank &lt;= 5;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>5. Jobs That Require a Bachelor’s Degree</h3>
+            <p>
+              This query filters occupations based on the degree requirement attached to them. By joining jobs to degree requirements, it becomes possible to isolate only those roles that match a specific education pathway.
+            </p>
+            <p>
+              That kind of query is valuable because education is often one of the first constraints people consider when exploring careers. It can also serve as the foundation for more layered questions, such as which bachelor’s-level roles have the highest salaries or strongest job growth.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>SELECT DISTINCT jc.JobID, jc.JobTitle
+FROM JobCategory jc
+JOIN JobDegreeRequirement jdr ON jc.JobID = jdr.JobID
+JOIN Degree d ON jdr.DegreeID = d.DegreeID
+WHERE d.DegreeType = 'Bachelor';</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>6. Jobs Without Training Requirements</h3>
+            <p>
+              This query uses a <strong>LEFT JOIN</strong> to find jobs that do not appear in the training requirements table. That makes it useful for identifying occupations with fewer formal barriers to entry.
+            </p>
+            <p>
+              Ordering those results by salary adds another layer of insight. It shows which jobs are both comparatively accessible and still financially strong, which could be especially useful for workforce advising or career exploration.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>SELECT jc.JobID, jc.JobTitle, jc.MedianSalary
+FROM JobCategory jc
+LEFT JOIN JobTrainingRequirement jtr ON jc.JobID = jtr.JobID
+WHERE jtr.JobID IS NULL
+ORDER BY jc.MedianSalary DESC;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>7. Top Jobs by Numeric Growth</h3>
+            <p>
+              This query calculates the raw numeric difference between projected 2033 employment and 2023 employment. Instead of percentage growth, it focuses on how many additional positions are expected to exist.
+            </p>
+            <p>
+              That matters because very large occupations may have a modest percentage increase but still create a huge number of actual jobs. Looking at numeric growth gives a more concrete sense of scale.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH RankedJobsDiff AS (
+  SELECT JobID, JobTitle,
+         (EmployedCount2033 - EmployedCount2023) AS NewPositionOpenings,
+         RANK() OVER (
+           ORDER BY (EmployedCount2033 - EmployedCount2023) DESC
+         ) AS Rank
+  FROM JobCategory
+)
+SELECT Rank, JobID, JobTitle, NewPositionOpenings
+FROM RankedJobsDiff
+WHERE Rank &lt;= 5;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>8. Jobs With the Lowest Percentage Growth</h3>
+            <p>
+              This query measures change as a percentage instead of a raw count. That gives a different perspective by showing which jobs are projected to grow the least relative to their current size.
+            </p>
+            <p>
+              Together, this query and the previous one show why multiple measures matter. A job can look very different depending on whether you compare percentage change or total number of positions added.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH RankedJobDiffPercent AS (
+  SELECT JobID, JobTitle,
+         ROUND(((CAST(EmployedCount2033 - EmployedCount2023 AS FLOAT))
+         / EmployedCount2023) * 100.0, 2) AS EmployedCountPercentDiff,
+         RANK() OVER (
+           ORDER BY ((CAST(EmployedCount2033 - EmployedCount2023 AS FLOAT))
+           / EmployedCount2023) * 100.0 ASC
+         ) AS Rank
+  FROM JobCategory
+)
+SELECT Rank, JobID, JobTitle, EmployedCountPercentDiff
+FROM RankedJobDiffPercent
+WHERE Rank &lt;= 5;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>9. Average Annual Openings for Management Occupations</h3>
+            <p>
+              This query filters jobs by SOC code prefix and calculates the average annual openings for occupations beginning with <strong>11-</strong>, which correspond to management roles in the dataset.
+            </p>
+            <p>
+              Even though the current join could be simplified, the underlying intent is useful: it shows how occupational codes can be used to analyze subsets of the labor market rather than treating all jobs as one undifferentiated group.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH Soc11 AS (
+  SELECT jc.JobID, jc.JobTitle, jc.OpeningsAvg
+  FROM JobCategory jc
+  WHERE jc.JobID LIKE '11-%'
+)
+SELECT ROUND(AVG(OpeningsAvg), 2) AS AvgAnnualOpenings_Soc11
+FROM Soc11;</code></pre>
+          </div>
+        </article>
+
+        <article class="query-card">
+          <div class="query-copy">
+            <h3>10. Employers Offering Multiple Trainings</h3>
+            <p>
+              This query groups employer-training relationships and counts how many distinct training programs each employer provides. It then filters to only show employers with more than one training offering.
+            </p>
+            <p>
+              This is a good example of how the relational structure supports questions beyond labor statistics alone. It shows how employers can also be analyzed as part of a broader workforce ecosystem.
+            </p>
+          </div>
+          <div class="query-code">
+<pre><code>WITH EmTrCo AS (
+  SELECT et.EmployerID, e.EmployerName,
+         COUNT(DISTINCT et.TrainingID) AS DistinctTrainings
+  FROM EmployerTraining et
+  JOIN Employer e ON et.EmployerID = e.EmployerID
+  GROUP BY et.EmployerID, e.EmployerName
+)
+SELECT EmployerID, EmployerName, DistinctTrainings
+FROM EmTrCo
+WHERE DistinctTrainings &gt; 1;</code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What This Project Demonstrates</h2>
+      <div class="two-col-text">
+        <div>
+          <p>
+            This project demonstrates that I can design a relational schema from the ground up, translate a real-world domain into entities and relationships, and then use SQL to produce meaningful analysis from that structure.
+          </p>
+          <p>
+            It also shows that I understand how to use normalization not just as a technical exercise, but as a way to build systems that are cleaner, more scalable, and easier to query.
+          </p>
+        </div>
+        <div>
+          <p>
+            On the analytics side, the project highlights skills in ranking, window functions, Common Table Expressions, grouping, filtering, and comparative analysis. On the design side, it reflects my ability to take something technical and turn it into a clear, portfolio-ready story.
+          </p>
+          <p>
+            Overall, this case study is about more than SQL syntax. It is about structuring data in a way that supports better questions and better decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-section">
+      <h2>Tools Used</h2>
+      <div class="tool-pills">
+        <span>SQL</span>
+        <span>Azure Data Studio</span>
+        <span>VS Code</span>
+        <span>Relational Modeling</span>
+        <span>Normalization</span>
+        <span>CTEs</span>
+        <span>Window Functions</span>
+        <span>Aggregates</span>
+      </div>
+
+      <div class="case-links">
+        <a href="https://github.com/elaizahoxha/Job-Market-Analytics.git" class="case-btn" target="_blank" rel="noopener">View GitHub</a>
+        <a href="index.html#projects" class="case-btn secondary">Back to Projects</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="database-case.js"></script>
+</body>
+</html>

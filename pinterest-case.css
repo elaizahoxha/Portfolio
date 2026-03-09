@@ -1,0 +1,311 @@
+:root {
+
+  --bg: #f2edf1;
+  --text: #2d1f29;
+  --muted: #5e5159;
+
+  --card: rgba(255,255,255,0.75);
+  --line: rgba(45,31,41,0.08);
+
+  --champagne: #E2D4DF;
+
+  --max: 1240px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background:
+    radial-gradient(circle at top left, rgba(185,146,176,0.12), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(160,128,153,0.08), transparent 24%),
+    var(--bg);
+
+  color: var(--text);
+  line-height: 1.75;
+
+}
+
+
+
+/* NAV */
+
+.case-nav {
+
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 22px 0 0;
+
+}
+
+.back-link {
+
+  text-decoration: none;
+  color: var(--muted);
+
+  font-size: 15px;
+  font-weight: 500;
+
+}
+
+
+
+/* HERO */
+
+.hero {
+
+  padding: 40px 0 80px;
+
+}
+
+.hero-inner {
+
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+
+}
+
+.hero h1 {
+
+  margin: 0;
+
+  font-family: "Playfair Display";
+
+  font-size: clamp(58px,8vw,110px);
+
+  line-height: 0.98;
+
+}
+
+.hero-sub {
+
+  max-width: 800px;
+
+  margin-top: 32px;
+
+  font-size: clamp(20px,2vw,30px);
+
+  color: var(--muted);
+
+}
+
+
+
+/* META PILLS */
+
+.hero-meta {
+
+  display: flex;
+  gap: 12px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+.meta-pill {
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.7);
+
+  border: 1px solid var(--line);
+
+  font-size: 14px;
+
+}
+
+
+
+/* SECTION */
+
+.section {
+
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 72px 0;
+
+  border-top: 1px solid rgba(45,31,41,0.06);
+
+}
+
+.section:first-child {
+  border-top: none;
+}
+
+.section.dark {
+
+  background: #2A262A;
+  color: white;
+
+  padding-left: 24px;
+  padding-right: 24px;
+
+}
+
+.section h2 {
+
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display";
+
+  font-size: clamp(34px,4vw,56px);
+
+}
+
+.body {
+
+  max-width: 820px;
+  font-size: 18px;
+
+}
+
+
+
+/* METRICS */
+
+.metrics {
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  gap: 30px;
+
+  margin-top: 40px;
+
+}
+
+.metric {
+
+  background: var(--card);
+
+  border: 1px solid var(--line);
+
+  border-radius: 20px;
+
+  padding: 24px;
+
+  text-align: center;
+
+}
+
+.metric h3 {
+
+  font-family: "Playfair Display";
+
+  font-size: 40px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+/* IMAGE */
+
+.image-block {
+
+  margin-top: 60px;
+  border-radius: 16px;
+
+}
+
+.image-block img {
+
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+}
+
+/* SPLIT */
+
+.split {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+
+  margin-top: 30px;
+
+}
+
+
+
+/* BOARDS */
+
+.board-grid {
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 30px;
+
+  margin-top: 30px;
+
+}
+
+.board-card {
+
+  background: var(--champagne);
+
+  border-radius: 20px;
+
+  transition: transform .3s ease;
+
+}
+
+
+.board-card:hover {
+
+  transform: translateY(-6px);
+
+}
+
+.board-info {
+
+  padding: 22px;
+
+}
+
+.board-info h3 {
+
+  font-family: "Playfair Display";
+
+}
+
+.board-card img {
+
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+  .metrics,
+  .board-grid,
+  .split {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>StudyHaven | Case Study</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="studyhaven-case.css">
+</head>
+
+<body>
+
+    <nav class="case-nav">
+      <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </nav>
+    
+    <header id="hero">
+        <div class="hero-inner">
+      
+          <div class="hero-meta">
+            <span class="meta-pill">Product & Design Lead</span>
+            <span class="meta-pill">Front-End Developer</span>
+            <span class="meta-pill">Figma · HTML · CSS · JavaScript</span>
+          </div>
+      
+          <h1>StudyHaven</h1>
+      
+          <p class="hero-sub">
+            StudyHaven is a focus environment designed to remove the hidden
+            friction that prevents students from starting their work.  
+            Instead of juggling multiple tools, StudyHaven combines task
+            planning, ambient environments, and structured focus sessions
+            into one intentional space.
+          </p>
+      
+        </div>
+      </header>
+
+<main>
+
+    <section class="section fade-in">
+        <h2>Project Overview</h2>
+      
+        <div class="snapshot-grid">
+      
+          <div>
+            <h4>Timeline</h4>
+            <p>
+              Six week product design and engineering sprint conducted at
+              the University of Washington. The project moved from early
+              behavioral research through interaction design and finally
+              into a fully functioning front-end prototype.
+            </p>
+          </div>
+      
+          <div>
+            <h4>Role</h4>
+            <p>
+              I led the product concept, user research synthesis,
+              interface design, and front-end development.  
+              This included designing the study environments in Figma,
+              building the interface in HTML/CSS, and implementing
+              the focus timer and task system with JavaScript.
+            </p>
+          </div>
+      
+          <div>
+            <h4>Core Goal</h4>
+            <p>
+              Reduce the cognitive friction that happens before studying
+              begins by creating a consistent ritual for starting work.
+              Instead of switching between multiple tools, students enter
+              one environment designed specifically for focus.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+
+
+<section class="section fade-in">
+    <h2>Context & Constraints</h2>
+  
+    <p>
+      StudyHaven was developed within an academic setting.
+      The goal was not to build something visually impressive, 
+      it was to create a functional web application that addressed an actual behavioral friction.
+    </p>
+  
+    <p>
+      The primary constraint was time. The project was completed within six weeks, 
+      which required prioritizing clarity over complexity. 
+      Backend infrastructure was intentionally excluded, meaning all system logic 
+      had to operate entirely on the front end.
+    </p>
+  
+    <p>
+      This limitation shaped the architecture. State persistence, task management, 
+      and timer logic had to be handled through JavaScript and LocalStorage alone. 
+      Every feature needed to be lightweight, deliberate, and technically feasible 
+      within those boundaries.
+    </p>
+  
+    <p>
+      Rather than seeing these constraints as limitations, I treated them as design parameters. 
+      They forced focus. They required precision. They ensured that every decision 
+      supported the core behavioral insight rather than expanding the scope unnecessarily.
+    </p>
+  </section>
+
+
+<section class="section fade-in">
+    <h2>The Problem</h2>
+  
+    <p>
+      Through interviews with UW Seattle students, a clear pattern emerged.
+      The most difficult part of studying was not the work itself.
+      It was starting.
+    </p>
+  
+    <p>
+      Students described opening multiple tabs before even choosing
+      what to work on. They switched between Spotify, Notion, Canvas,
+      Google Docs, and YouTube within minutes. Each small decision felt
+      insignificant on its own, but together they created friction.
+      By the time they were ready to focus, their mental energy was already depleted.
+    </p>
+  
+    <p>
+      What initially appeared to be procrastination was often decision fatigue.
+      Choosing music. Choosing a timer. Choosing which task to begin.
+      Choosing where to track progress. The abundance of tools meant
+      no single space felt complete.
+    </p>
+  
+    <p>
+      There was also no consistent ritual. Without a repeatable starting
+      environment, every study session required rebuilding the setup
+      from scratch. This lack of continuity made focus feel temporary
+      rather than sustained.
+    </p>
+  
+    <p>
+      Most importantly, accountability dissolved between sessions.
+      Tasks were scattered across apps. Progress was invisible.
+      When students returned the next day, it felt like beginning again.
+    </p>
+  
+    <p>
+      The core problem was not productivity. It was cognitive overload
+      before productivity even began.
+    </p>
+  </section>
+
+
+<section class="section fade-in">
+    <h2>Personas</h2>
+  
+    <div class="card-grid">
+  
+      <div class="persona-card">
+        <img src="images/persona1.png" alt="Olivia Persona">
+  
+        <div class="persona-content">
+          <h3>Olivia Martinez</h3>
+          <p>
+            Junior majoring in Political Science. Balances part time work and full course load.
+            Often opens multiple tabs before studying and spends too long deciding how to begin.
+            Feels mentally drained before the actual work starts.
+          </p>
+          <p>
+            Needs a clear starting ritual and fewer choices.
+            Values aesthetic environments but struggles with over customization.
+          </p>
+        </div>
+      </div>
+  
+      <div class="persona-card">
+        <img src="images/persona2.png" alt="Daniel Persona">
+  
+        <div class="persona-content">
+          <h3>Daniel Kim</h3>
+          <p>
+            Sophomore in Computer Science. Loves structure and tracking progress.
+            Already motivated but lacks an integrated system that combines timer,
+            task tracking, and ambient focus.
+          </p>
+          <p>
+            Wants visible progress and accountability.
+            Prefers minimal interfaces that reduce distraction.
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
+  <section class="section fade-in">
+    <h2>Themed Study Rooms</h2>
+  
+    <div class="mockup-row">
+      <figure class="mockup-card">
+        <img src="images/coffeeshop.png" alt="StudyHaven Coffee Shop theme">
+        <figcaption>Coffee Shop</figcaption>
+      </figure>
+  
+      <figure class="mockup-card">
+        <img src="images/rainyday.png" alt="StudyHaven Rainy Day theme">
+        <figcaption>Rainy Day</figcaption>
+      </figure>
+  
+      <figure class="mockup-card">
+        <img src="images/cozyroom.png" alt="StudyHaven Cozy Room theme">
+        <figcaption>Cozy Room</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+<section class="section dark fade-in">
+    <h2>Technical Deep Dive</h2>
+  
+    <p>
+      The core of StudyHaven was built entirely on front end logic.
+      Every interaction had to feel immediate while still maintaining
+      state across sessions.
+    </p>
+  
+    <p>
+      I built a custom timer state system that controlled transitions
+      between idle, focus, and break modes. Instead of relying on a
+      simple countdown, the logic accounted for resets, manual
+      interruptions, and edge cases where users refreshed mid session.
+    </p>
+  
+    <p>
+      The interface dynamically renders task lists and focus themes
+      using JavaScript. Elements are not static. They are created,
+      filtered, and removed in real time through DOM manipulation.
+    </p>
+  
+    <p>
+      LocalStorage was used to preserve task state, session history,
+      and theme selection. This allowed users to return without losing
+      their structure. Managing delete and filter cases required careful
+      logic so that removing a task would not break index ordering or
+      stored data.
+    </p>
+  
+    <p>
+      Theme switching was handled through controlled class injection.
+      Rather than reloading the page, the design updates instantly while
+      maintaining active session state.
+    </p>
+  </section>
+ 
+
+  <section class="section fade-in">
+    <h2>Impact & Metrics</h2>
+  
+    <p>
+      After testing with students, the feedback consistently pointed
+      toward reduced friction at the beginning of study sessions.
+    </p>
+  
+    <p>
+      Participants reported starting their sessions faster because
+      they no longer had to make multiple small decisions before
+      focusing. The limited themes and built in timer reduced the
+      mental overhead that normally delays productivity.
+    </p>
+  
+    <p>
+      Several students shared that seeing their tasks remain saved
+      between sessions increased their sense of accountability.
+      Progress felt continuous rather than temporary.
+    </p>
+  
+    <p>
+      Users also reported reduced tab switching because StudyHaven
+      combined timer, ambient environment, and task tracking into
+      one controlled space. This consolidation directly reduced
+      digital distraction.
+    </p>
+  </section>
+
+ 
+  <section class="section fade-in" id="reflection">
+    <h2>Reflection</h2>
+  
+    <p>
+      This was such a meaningful project for me. I put a lot of thought
+      and care into every decision. It was definitely work, but I truly
+      enjoyed it. I probably spent more time refining the small details
+      than I needed to, but that process felt important. Adjusting spacing,
+      testing color shifts, rethinking flows. It helped me understand how
+      much subtle friction shapes behavior.
+    </p>
+  
+    <p>
+      What stood out most was realizing that the hardest part of studying
+      is often not the studying itself. It is beginning. That moment of
+      hesitation carries more weight than we admit. Designing something
+      that reduces that psychological resistance felt far more powerful
+      than adding more features.
+    </p>
+  
+    <p>
+      I learned that clarity can be more supportive than flexibility.
+      Constrained choice does not limit users. It guides them.
+      Building StudyHaven made me more aware of how design shapes
+      behavior long before someone clicks a button.
+    </p>
+  
+    <p>
+      More than anything, this project reminded me that good product
+      design is not about complexity. It is about removing what
+      does not need to be there and protecting the mental space
+      of the person using it.
+    </p>
+  </section>
+
+</main>
+
+<script src="studyhaven-case.js"></script>
+</body>
+</html>

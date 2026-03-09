@@ -369,24 +369,7 @@ window.addEventListener("load", () => {
 })();
 
 
-/* ---------------------------------------
-   ✨ Simple modal handler (general use)
------------------------------------------ */
-(function() {
-  document.querySelectorAll("[data-open-modal]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = document.getElementById(btn.dataset.openModal);
-      target?.setAttribute("aria-hidden", "false");
-    });
-  });
 
-  document.querySelectorAll("[data-close-modal]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const parent = btn.closest(".modal");
-      parent?.setAttribute("aria-hidden", "true");
-    });
-  });
-})();
 
 
 /* ---------------------------------------
@@ -403,37 +386,8 @@ function smoothScrollTo(selector) {
 }
 
 
-/* ---------------------------------------
-   ✨ Auto-expand accordion lists
------------------------------------------ */
-(function() {
-  const accord = document.querySelectorAll(".accordion");
-
-  accord.forEach(acc => {
-    const header = acc.querySelector(".accordion-header");
-    header?.addEventListener("click", () => {
-      acc.classList.toggle("open");
-    });
-  });
-})();
 
 
-/* ---------------------------------------
-   ✨ Soft blur-on-scroll fade effect
------------------------------------------ */
-(function() {
-  const blurItems = document.querySelectorAll("[data-blur-scroll]");
-  if (!blurItems.length) return;
-
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    blurItems.forEach(el => {
-      const intensity = Math.min(12, y / 90).toFixed(1);
-      el.style.backdropFilter = `blur(${intensity}px)`;
-      el.style.opacity = 1 - Math.min(0.6, y / 900);
-    });
-  }, { passive: true });
-})();
 
 
 /* ---------------------------------------
@@ -492,35 +446,6 @@ if (typeof window.requestIdleCallback !== "function") {
 
 
 /* ---------------------------------------
-   ✔ Console error softener
------------------------------------------ */
-(function() {
-  const originalError = console.error;
-  console.error = function(...args) {
-    if (
-      args[0] &&
-      typeof args[0] === "string" &&
-      args[0].includes("null") &&
-      args[0].includes("addEventListener")
-    ) {
-      // Suppress harmless null-target errors
-      return;
-    }
-    originalError.apply(console, args);
-  };
-})();
-
-/* ---------------------------------------
    ✔ Page fully initialized notification
 ----------------------------------------- */
 document.documentElement.setAttribute("data-js-ready", "true");
-
-/* ---------------------------------------
-   END OF FILE
------------------------------------------ */
-
-
-
-
-
-
